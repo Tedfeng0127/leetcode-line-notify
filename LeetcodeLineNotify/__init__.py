@@ -71,7 +71,7 @@ def main(mytimer: func.TimerRequest) -> None:
     try:
         title = getDailyChallengeTitle()
         infos = getDailyChallengeInfo(title)
-        message = "\n{}.{}\n{}\nLikes:{:,}\nDislikes:{:,}\nAccepted:{:,}\nSubmissions:{:,}\nAcceptance:{}\nRelated Topics:\n{}\nLink:\n{}".format(*infos).replace("'", "")
+        message = "\n{}. {}\n{}\nLikes:{:,}\nDislikes:{:,}\nAccepted:{:,}\nSubmissions:{:,}\nAcceptance:{}\nRelated Topics:\n{}\nLink:\n{}".format(*infos).replace("'", "")
         sendMessage(message)
     except Exception as e:
         message = f"\nThere are some problems.\nCkeck it out later.\nError Message:\n{e}"
